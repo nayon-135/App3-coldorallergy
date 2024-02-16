@@ -144,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Results</p>
+		<p> id="results"</p><!--change this to id=results bc you need the id part.-->
 		<a onclick="getResults()" class="w3-btn w3-black">Get Results</a><!--added button for getting results-->
 		<script>
 			function getResults()
@@ -152,10 +152,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			var allergyPercent = 100*(allergy_count/4);
 			var coldPercent = 100*(cold_count/4);
 			var resultText = var resultText = document.getElementById("results");
-			resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + %"; 
 			}
 		</script>
-	</div><!--/content-->
+	</div><!--/right above this I added the percentage signs in the quotation marks so that it will calculate the percentage-->
 <footer 
 	<p>DIY!</p>
 </footer>
