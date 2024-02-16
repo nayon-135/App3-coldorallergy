@@ -144,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Get Results</p>
+		<!--deleted the title here because it's repetitive--> 
 		<a href="#six" onclick="getResults();" class="w3-btn w3-black">Get Results</a><!--added button for getting results-->
 	</div>
 </div>
@@ -155,6 +155,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
+		<p id="results"></p>
+		<a onlick="getResults()" class="w3-btn w3-black">Get results</a><!--added this code for executing the get result function-->
 		<script>
 			function getResults()
 			{
