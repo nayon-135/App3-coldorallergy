@@ -49,11 +49,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 	
 	function result(){
-			var allergyPercent = 100*(allergy_count/4);//this is for calculating percent allergy by dividng by the four total questions, and multiplying this by 100.//
-			var coldPercent = 100*(cold_count/4);//this is for calulating percent cold, using the same method above//
-			var result = document.getElementById("five");//this is so that it replaces the results test final page with the resulting pprobablities.//
-			result.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
-	}//I inserted this line above to showcase the percent allergy and the percent chance of cold.//
+		var allergyPercent = (allergy_count/4)*100;//this is for calculating percent allergy by dividng by the four total questions, and multiplying this by 100.//
+		var coldPercent = (cold_count/4)*100;//this is for calulating percent cold, using the same method above//
+		var result = document.getElementById("five");//this is so that it replaces the results test final page with the resulting pprobablities.//
+		result.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	}
+	//I inserted this line above to showcase the percent allergy and the percent chance of cold.//
 	//I just moved this entire code on the top above the script//
 
   </script>
@@ -141,7 +142,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are youre symptoms seasonal or chronic?</p>
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
-	</div>
+	        </div>
 </div>
 
 <div class="page" id="five">
