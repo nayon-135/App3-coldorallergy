@@ -50,6 +50,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
+	function results(){
+		var allergyPercent = 100*(allergy_count/4);//this is for calculating percent allergy//
+		var coldPercent = 100*(cold_count/4);//this is for calulating percent cold//
+		var resultText = document.getElementById("results");//this is so that you can see as pdf//
+		resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + %"; 
   </script>
 
 
@@ -139,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <!-- RESULTS -->
-<div class="page" id="five"> <!--added fifth page after the fourth page-->
+<div class="page" id="five"> <!--added fifth page after the fourth page I tried adding the results page, but only the button pops up and it will not move on.-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1><!--changed title to results-->
 	</div>
