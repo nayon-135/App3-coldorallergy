@@ -36,7 +36,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
+        var allergy_count = 0;//this is the code for establishing the variable of allergy.//
         var cold_count = 0;
 
 
@@ -47,6 +47,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function result(){
+			var allergyPercent = 100*(allergy_count/4);//this is for calculating percent allergy by dividng by the four total questions, and multiplying this by 100.//
+			var coldPercent = 100*(cold_count/4);//this is for calulating percent cold, using the same method above//
+			var result = document.getElementById("five");//this is so that it replaces the results test final page with the resulting pprobablities.//
+			result.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	}//I inserted this line above to showcase the percent allergy and the percent chance of cold.//
+	//I just moved this entire code on the top above the script//
 
   </script>
 
@@ -136,26 +144,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
-<!-- RESULTS -->
-<div class="page" id="five"> <!--added fifth page after the fourth page I tried adding the results page, but only the button pops up and it will not move on.-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1><!--changed title to results-->
-	</div>
-	
+<div class="page" id="five">
 	<div id="content" class="w3-container">
-		<p id="results"></p>
-		<a onclick="getResults()" class="w3-btn w3-black">Get results</a><!--added button for getting results-->
-		<script>
-			function getResults()
-			{
-			var allergyPercent = 100*(allergy_count/4);//this is for calculating percent allergy//
-			var coldPercent = 100*(cold_count/4);//this is for calulating percent cold//
-			var resultText = document.getElementById("results");//this is so that you can see as pdf//
-			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + %"; 
-			}//this was to see the percent that it is allergy vs percent that it is a cold.//
-		</script>
+		<button class="w3-btn w3-black" onclick="result();"> Results </button>
+		<p id="result"></p>
 	</div>
-</div><!--/right above this I added the percentage signs in the quotation marks so that it will calculate the percentage-->
+</div>		
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
