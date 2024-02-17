@@ -135,39 +135,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are youre symptoms seasonal or chronic?</p>
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
-	</div><!--/content-->
+	</div>
 </div>
 
+<!-- RESULTS -->
 <div class="page" id="five"> <!--added fifth page after the fourth page-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1><!--changed title to results-->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<!--deleted the title here because it's repetitive--> 
-		<a href="#six" onclick="getResults();" class="w3-btn w3-black">Get Results</a><!--added button for getting results-->
-	</div>
-</div>
-
-<div class="page" id="six"><!--I added a new page for results-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
 		<p id="results"></p>
-		<a onlick="getResults()" class="w3-btn w3-black">Get results</a><!--added this code for executing the get result function-->
+		<a onclick="getResults()" class="w3-btn w3-black">Get results</a><!--added button for getting results-->
 		<script>
 			function getResults()
 			{
-			var allergyPercent = 100*(allergy_count/4);
-			var coldPercent = 100*(cold_count/4);
-			var resultText = var resultText = document.getElementById("results");
+			var allergyPercent = 100*(allergy_count/4);//this is for calculating percent allergy//
+			var coldPercent = 100*(cold_count/4);//this is for calulating percent cold//
+			var resultText = document.getElementById("results");//this is so that you can see as pdf//
 			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + %"; 
-			}
+			}//this was to see the percent that it is allergy vs percent that it is a cold.//
 		</script>
-	</div><!--/right above this I added the percentage signs in the quotation marks so that it will calculate the percentage-->
-<footer 
+	</div>
+</div><!--/right above this I added the percentage signs in the quotation marks so that it will calculate the percentage-->
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 
