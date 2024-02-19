@@ -55,11 +55,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		result.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 	}
 	//I inserted this line above to showcase the percent allergy and the percent chance of cold.//
+	//At first, I had the code above below the other codes for creating the other pages, but that didn't work. So, I moved it here.//
+	//It still didn't work, so I tried changed the ID page to five instead of "results" and also adjusted the spacings.//
 	//I just moved this entire code on the top above the script; after I moved it, I also adujusted my spacing of the var allergy percent, and it finally produced the results page and the percentages I needed.//
-
+//After all of this, I realized I needed to make sure my ID references on the results page matched the page ID before it//
   </script>
 
-
+<!--this part of the code below is to set up the pages in the app-->
 
 <style>	
 .body {
@@ -109,7 +111,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div><!--/content-->
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"><!--This part is to identify the page as page two so that the button from page one can be directed to page two.-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
@@ -145,7 +147,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	        </div>
 </div>
 
-<div class="page" id="five">
+<div class="page" id="five"><!--This is just the results page so I just added a results button that would jump to final caculations for results.-->
 	<div id="content" class="w3-container">
 		<button class="w3-btn w3-black" onclick="result();"> Results </button>
 		<p id="result"></p>
